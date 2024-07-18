@@ -9,7 +9,6 @@
     <name>maven-site-github-example</name>
     <url>http://maven.apache.org</url>
 
-
     <scm>
         <url>git@github.com:chensoul/maven-site-github-example.git</url>
         <connection>scm:git:${project.scm.url}</connection>
@@ -60,9 +59,10 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-scm-publish-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.3.0</version>
                     <configuration>
                         <scmBranch>gh-pages</scmBranch>
+                        <tryUpdate>true</tryUpdate>
                     </configuration>
                 </plugin>
             </plugins>
