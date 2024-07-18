@@ -43,4 +43,4 @@ jobs:
 
       - name: Publish site to github pages
         run: |
-          mvn --ntp --batch-mode --update-snapshots -P site clean site scm-publish:publish-scm -Dscmpublish.serverId=github
+          mvn --ntp --batch-mode --update-snapshots clean site scm-publish:publish-scm -Dscmpublish.serverId=github
