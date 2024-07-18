@@ -9,6 +9,30 @@
     <name>maven-site-github-example</name>
     <url>http://maven.apache.org</url>
 
+
+    <scm>
+        <url>git@github.com:chensoul/maven-site-github-example.git</url>
+        <connection>scm:git:${project.scm.url}</connection>
+        <!--  maven-scm-publish-plugin 插件在 github action 中使用 https 协议通过用户名和密码登录  -->
+        <developerConnection>scm:git:https://github.com/chensoul/maven-site-github-example.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <!--        <site>-->
+        <!--            <id>github</id>-->
+        <!--            <url>scm:git:git@github.com:chensoul/maven-site-github-example.git</url>-->
+        <!--        </site>-->
+    </distributionManagement>
+
     <properties>
         <java.version>8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,21 +53,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <!--        <site>-->
-        <!--            <id>github</id>-->
-        <!--            <url>scm:git:git@github.com:chensoul/maven-site-github-example.git</url>-->
-        <!--        </site>-->
-    </distributionManagement>
 
     <build>
         <pluginManagement>
