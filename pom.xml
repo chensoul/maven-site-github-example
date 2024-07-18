@@ -9,14 +9,6 @@
     <name>maven-site-github-example</name>
     <url>http://maven.apache.org</url>
 
-    <scm>
-        <url>git@github.com:chensoul/maven-site-github-example.git</url>
-        <connection>scm:git:${project.scm.url}</connection>
-        <!--  maven-scm-publish-plugin 插件在 github action 中使用 https 协议通过用户名和密码登录  -->
-        <developerConnection>scm:git:https://github.com/chensoul/maven-site-github-example.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
@@ -61,7 +53,6 @@
                     <artifactId>maven-scm-publish-plugin</artifactId>
                     <version>3.3.0</version>
                     <configuration>
-                        <scmBranch>gh-pages</scmBranch>
                         <tryUpdate>true</tryUpdate>
                     </configuration>
                 </plugin>
