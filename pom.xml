@@ -17,9 +17,8 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
         <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content>
-        <scmpublish.pubScmUrl>scm:git:git@github.com:chensoul/maven-site-github-example.git</scmpublish.pubScmUrl>
+        <scmpublish.pubScmUrl>scm:git:https://github.com/chensoul/maven-site-github-example.git</scmpublish.pubScmUrl>
         <scmpublish.scm.branch>gh-pages</scmpublish.scm.branch>
-        <!--        <scmpublish.serverId>github</scmpublish.serverId>-->
     </properties>
 
     <dependencies>

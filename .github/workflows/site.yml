@@ -26,11 +26,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Maven
-        uses: stCarolas/setup-maven@v5
-        with:
-          maven-version: 3.9.6
-
       - name: Java ${{ matrix.Java }}
         uses: actions/setup-java@v4
         with:
