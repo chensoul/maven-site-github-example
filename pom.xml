@@ -63,6 +63,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-site-plugin</artifactId>
+                <version>4.0.0-M15</version>
                 <configuration>
                     <locales>en,fr</locales>
                 </configuration>
