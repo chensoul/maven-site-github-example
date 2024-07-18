@@ -18,10 +18,10 @@
             <id>ossrh</id>
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
-        <!--        <site>-->
-        <!--            <id>github</id>-->
-        <!--            <url>scm:git:git@github.com:chensoul/maven-site-github-example.git</url>-->
-        <!--        </site>-->
+        <site>
+            <id>github</id>
+            <url>scm:git:git@github.com:chensoul/maven-site-github-example.git</url>
+        </site>
     </distributionManagement>
 
     <properties>
@@ -64,8 +64,17 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <version>4.0.0-M15</version>
                 <configuration>
-                    <locales>en,fr</locales>
+                    <locales>default,en,fr</locales>
                 </configuration>
+                <!-- Execution like this will pick up in the normal site cycle -->
+                <executions>
+                    <execution>
+                        <id>attach-descriptor</id>
+                        <goals>
+                            <goal>attach-descriptor</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
